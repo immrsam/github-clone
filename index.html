@@ -2,15 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/e5d32cdec5.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="app">
-      <h1>Github</h1>
-    </div>
-    <script src="/main.js"></script>
+    <header>
+      <div class="row header">
+        <button class="nav-toggle" aria-label="open navigation">
+          <i class="fa-solid fa-bars fa-xl"></i>
+        </button>
+        <i class="fa-brands fa-github fa-2x"></i>
+        <div class="notification"></div>
+        <i class="fa-regular fa-bell fa-lg"></i>
+      </div>
+    </header>
   </body>
+  <script src="/main.js"></script>
 </html>
