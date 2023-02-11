@@ -20,28 +20,34 @@
       </div>
     </header>
     <main class="main">
-      <div class="repositories">
-        <h2>Repositories</h2>
-        <div class="container">
-          <input type="search" id="repo-search" name="q" placeholder="Find a repository..." />
-          <ul class="list">
-            <li><p>name/repo</p></li>
-            <li><p>name/repo</p></li>
-            <li><p>name/repo</p></li>
-            <li><p>name/repo</p></li>
-            <li><p>name/repo</p></li>
-            <li><p>name/repo</p></li>
-            <li><p>name/repo</p></li>
-          </ul>
-          <hr />
-          <h4>Show more</h4>
+      <div class="dashboard-sideboard">
+        <div class="repositories">
+          <h2 id="repositories">Repositories</h2>
+          <div class="container">
+            <div id="top-repositories">
+              <h2>Top Repositories</h2>
+              <button id="btn-new-repo"><i class="fa-regular fa-bell fa-lg"></i>New</button>
+            </div>
+            <input type="search" id="repo-search" name="q" placeholder="Find a repository..." />
+            <ul class="list">
+              <li><p>name/repo</p></li>
+              <li><p>name/repo</p></li>
+              <li><p>name/repo</p></li>
+              <li><p>name/repo</p></li>
+              <li><p>name/repo</p></li>
+              <li><p>name/repo</p></li>
+              <li><p>name/repo</p></li>
+            </ul>
+            <hr />
+            <h4>Show more</h4>
+          </div>
         </div>
-      </div>
-      <div class="recent-activity">
-        <h2>Recent activity</h2>
-        <div class="activity-container">
-          <div class="activity-description">
-            <h4>When you take actions across GitHub, we'll provide links to that activity here.</h4>
+        <div class="recent-activity">
+          <h2>Recent activity</h2>
+          <div class="activity-container">
+            <div class="activity-description">
+              <h4>When you take actions across GitHub, we'll provide links to that activity here.</h4>
+            </div>
           </div>
         </div>
       </div>

@@ -9,6 +9,7 @@
   --dark: #24292f;
   --light-gray: #f7f8fa;
   --color-border-default: #d0d7de;
+  --green: #2da44e;
 }
 
 h1,
@@ -74,6 +75,8 @@ header {
   background-color: var(--light-gray);
   padding: 1em;
   margin-top: 1em;
+  display: grid;
+  grid-template-columns: 100%;
 }
 
 .container {
@@ -101,6 +104,23 @@ header {
 .activity-description {
   border: 1px dashed var(--color-border-default);
   padding: 1em;
+  border-radius: 0.5em;
+}
+
+#repositories {
+  display: block;
+}
+#top-repositories {
+  display: none;
+  font-weight: 500;
+  justify-content: space-between;
+}
+
+#btn-new-repo {
+  color: white;
+  background-color: var(--green);
+  border: none;
+  padding: 0.7em 1.5em;
   border-radius: 0.5em;
 }
 
@@ -137,4 +157,47 @@ input#repo-search[type="search"]::-webkit-search-results-decoration {
 hr {
   border-top: 1px solid var(--color-border-default);
   margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 544px) {
+  .main {
+    /* background-color: red; */
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    /* background-color: blue; */
+  }
+}
+
+@media only screen and (min-width: 1012px) {
+  #repositories {
+    display: none;
+  }
+  #top-repositories {
+    display: flex;
+    padding: 1em 0em;
+  }
+  .main {
+    grid-template-columns: 33% 33% 33%;
+    /* background-color: yellow; */
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    padding: 0 1em;
+    border: none;
+  }
+  .dashboard-sideboard {
+    padding: 0em 1em 1em 1em;
+    background-color: white;
+  }
+}
+
+@media only screen and (min-width: 1150px) {
+  .main {
+    grid-template-columns: repeat(4, 25%);
+    /* background-color: green; */
+  }
 }
