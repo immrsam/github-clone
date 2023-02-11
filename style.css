@@ -192,6 +192,7 @@ hr {
   .dashboard-sideboard {
     padding: 0em 1em 1em 1em;
     background-color: white;
+    max-width: 350px;
   }
 }
 
