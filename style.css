@@ -30,6 +30,14 @@ h3 {
   font-size: 1em;
 }
 
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji";
@@ -40,6 +48,10 @@ header {
   background: var(--dark);
   color: white;
   text-align: center;
+}
+
+.f4 {
+  font-size: 16px;
 }
 
 .row {
@@ -77,6 +89,7 @@ header {
   margin-top: 1em;
   display: grid;
   grid-template-columns: 100%;
+  height: 100vh;
 }
 
 .container {
@@ -105,6 +118,11 @@ header {
   border: 1px dashed var(--color-border-default);
   padding: 1em;
   border-radius: 0.5em;
+}
+
+.bold {
+  font-weight: 600;
+  font-size: 1.6em;
 }
 
 #repositories {
@@ -166,12 +184,6 @@ hr {
 }
 
 @media only screen and (min-width: 768px) {
-  .main {
-    /* background-color: blue; */
-  }
-}
-
-@media only screen and (min-width: 1012px) {
   #repositories {
     display: none;
   }
@@ -180,25 +192,41 @@ hr {
     padding: 1em 0em;
   }
   .main {
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 33% 66%;
     /* background-color: yellow; */
     padding: 0;
     margin: 0;
   }
-  .container {
+  .dashboard-middle {
+    margin: 2em;
+  }
+  .dashboard-sideboard .container {
     padding: 0 1em;
     border: none;
   }
+
   .dashboard-sideboard {
+    position: sticky;
     padding: 0em 1em 1em 1em;
     background-color: white;
     max-width: 350px;
+    max-height: 100vh;
+    min-height: 50vh;
+  }
+}
+
+@media only screen and (min-width: 1012px) {
+  .main {
+    grid-template-columns: 25% 50% 25%;
+    /* background-color: green; */
   }
 }
 
 @media only screen and (min-width: 1150px) {
-  .main {
-    grid-template-columns: repeat(4, 25%);
-    /* background-color: green; */
+}
+
+@media only screen and (max-height: 600px) {
+  .dashboard-sideboard {
+    overflow: scroll;
   }
 }
