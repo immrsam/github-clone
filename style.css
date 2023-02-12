@@ -73,9 +73,8 @@ header {
 
 .notification {
   position: absolute;
-  right: 14px;
-  top: 15px;
-
+  right: 0.8em;
+  top: 0.8em;
   width: 14px;
   height: 14px;
   background-image: linear-gradient(rgb(100, 175, 255), rgb(55, 55, 255));
@@ -125,6 +124,10 @@ header {
   font-size: 1.6em;
 }
 
+.button-space {
+  padding: 0em 0.2em;
+}
+
 #repositories {
   display: block;
 }
@@ -135,11 +138,14 @@ header {
 }
 
 #btn-new-repo {
+  display: flex;
+  justify-content: space-between;
   color: white;
   background-color: var(--green);
   border: none;
   padding: 0.7em 1.5em;
   border-radius: 0.5em;
+  max-height: 2.5em;
 }
 
 #repo-search {
@@ -177,10 +183,9 @@ hr {
   margin-bottom: 1em;
 }
 
-@media only screen and (min-width: 544px) {
-  .main {
-    /* background-color: red; */
-  }
+.dashboard-end {
+  padding: 2em;
+  display: none;
 }
 
 @media only screen and (min-width: 768px) {
@@ -220,12 +225,30 @@ hr {
     grid-template-columns: 25% 50% 25%;
     /* background-color: green; */
   }
+  .dashboard-end {
+    display: flex;
+    flex-direction: column;
+  }
+  .dashboard-end .container {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: black;
+    max-width: 300px;
+  }
+  .dashboard-end .container button {
+    color: white;
+    background-color: inherit;
+
+    width: 1em;
+    height: 1em;
+  }
 }
 
 @media only screen and (min-width: 1150px) {
 }
 
-@media only screen and (max-height: 600px) {
+@media only screen and (max-height: 600px) and (min-width: 768px) {
   .dashboard-sideboard {
     overflow: scroll;
   }
